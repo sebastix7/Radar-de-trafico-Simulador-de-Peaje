@@ -19,6 +19,13 @@ struct SistemaMonitoreo {
     T2 limite;
 
     SistemaMonitoreo(T2 lim) : limite(lim) {
-        std::cout
+        std::cout <<"[SistemaMonitoreo] Inicializacion con limite de: " << limite << " m/s" << std::endl;
+    }
+    ~SistemaMonitoreo() {
+        std::cout <<"[SistemaMonitoreo] Destructor invocado de manera segura (RAII)" << std::endl;
+    }
+    void procesarYReportar(Vehiculo<T> listaAutos[], T1 cantidad) {
+        std::cout << " Reporte de trafico y captura de infractores" << std::endl;
+        std::cout << std::left << std::setw(10) << "ESTADO" << "VELOCIDAD CALCULADA\n";
     }
 }
